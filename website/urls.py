@@ -1,9 +1,10 @@
 from django.contrib import admin
 from django.urls import path
 from website.views import home,contact,about
+app_name = 'website'
 
 urlpatterns = [
-    path('',home),
-    path('contact',contact),
-    path('about',about)
+    path('',home,name='home'),
+    path('contact',contact,name='contact'),
+    path('about',about,name='about'),
 ]
